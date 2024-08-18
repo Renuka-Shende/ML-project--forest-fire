@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analysis</title>
+
+    <style>
+        body{
+            font-family: 'Poppins', sans-serif;
+            margin: 0px;
+            padding: 0px;
+        }
+
+        .head {
+        display: flex;
+        justify-content: space-between;
+        background-color: rgba(188, 217, 102, 0.977);
+        height: 75px;
+        
+    }
+    
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .navbar li {
+        font-size: 25px;
+        list-style-type: none;
+    }
+    
+    .navbar li a {
+        color: rgb(13, 1, 1);
+        text-decoration: none;
+    }
+    
+    .navbar li a:hover {
+        color: rgb(0, 85, 255);
+    }
+    
+    .left img {
+        margin-top: 5px;
+        margin-left: 5px;
+        width: 70px;
+        border: 2px solid rgb(12, 0, 0);
+        border-radius: 50%;
+    }
+    
+    .left {
+        margin-right: 10px;
+        display: flex;
+        align-items: center;
+    }
+    
+    
+    .mid {
+        width: 650px;
+        padding-left: 0 px;
+        padding-right: 20px;
+    }
+    
+    .footer{
+        background-color: rgba(188, 217, 102, 0.977);
+        height: 75px;
+        padding: 10px;
+    }
+    
+    .main {
+    display: flex;
+    justify-content: space-between;
+    background-color: #dee9d0 ;
+    height: 450px;
+    padding: 5px; 
+    border-radius: 10px; 
+    margin: 20px;
+}
+
+.r{
+    margin: 50px;
+    font-size: 20px;
+}
+
+      </style>
+
+</head>
+<body>
+    <header class="head">
+        <div class="left">
+          <img src="/static/images/logo.png" class="text" style="margin-left: 10px; margin-bottom: 5px;" />
+          <h5 class="textt" style="margin-top: 15px; margin-left: 20px">
+            Wildfire <br />
+            Alert
+          </h5>
+        </div>
+        <div class="mid">
+          <ul class="navbar">
+            <li><a href="/" class="active">Home</a></li>
+            <li><a href="/fire">Fire Risk</a></li>
+            <li><a href="/weather">Weather</a></li>
+            <li><a href="/analysis">Analysis</a></li>
+          </ul>
+        </div>
+      </header>
+      <br>
+
+      <center><h1>Increasing Forest Fire Alerts: A Worrying Trend </h1></center>
+      <p style="margin: 50px; font-size: 20px;">Over the last 20 years, fire-related tree cover loss in the tropics increased at a rate of about 36,000 hectares 
+        (around 5%) per year and accounted for roughly 15% of the total global increase in tree cover loss from 
+        fires between 2001 and 2024.</p>
+        
+    <div class="main">
+        <div class="left1" style="width: 50%;margin: 30px;">
+            <img src="/static/images/plot4.png" alt="plot" style="height: 400px; width: 700px;border: 2px solid black;">
+        </div>
+        <div class="right" style="width: 50%;margin: 30px;">
+            <img src="/static/images/plot3.jpg" alt="plot" style="height: 400px; width: 600px;border: 2px solid black;">
+        </div>
+    </div>
+    <br>
+    <center><h1>About Our Largest Rainforest: The Amazon Rainforest </h1></center>
+      <p style="margin: 50px; font-size: 20px;">The Amazon rainforest stands as the world's largest rainforest, 
+        playing a crucial role by providing approximately 30% of the Earth's oxygen, effectively serving as the 
+        planet's lungs. As part of our research efforts, we have conducted data analysis focusing on forest fire 
+        incidents specifically within the Brazilian region of the Amazon rainforest.</p> 
+    <h2 style="margin: 50px;">About the dataset:</h3>
+    <p style="margin: 50px; font-size: 20px;">This dataset report of the number of forest fires in Brazil divided by states. 
+        The series comprises the period of approximately 10 years (1998 to 2017). The data is obtained from the 
+        official website of the Brazilian government.</p>
+    
+        <div class="main">
+            <div class="left1" style="width: 50%;margin: 30px;">
+                <img src="/static/images/abc.png" alt="plot" style="height: 400px; width: 700px;border: 2px solid black;">
+            </div>
+            <div class="right" style="width: 50%;margin: 30px;">
+                <ul class="r" >
+                    <li>This graph shows the yearly trend of forest fires from 1998 to 2017.</li><br>
+                    <li>It can be observed that forest fires were at their peak in the years 2003 and 2016. </li><br>
+                    <li>The primary observation from the graph indicates a gradual increase in the frequency of 
+                    forest fires between 1998 and 2017. Specifically, there has been a rise from 20,000 incidents 
+                    to 36,000 which represent a significant 80% surge.
+                    </li>
+                    
+                  </ul>
+            </div>
+        </div>
+
+        <div class="main">
+            
+            <div class="left2" style="width: 50%;margin: 5px;">
+                <ul class="r" >
+                    <li>This graph shows the monthly trend of forest fires from 1998 to 2017.</li><br>
+                    <li>It can be observed that forest fires were at their peak in the months from July to November. </li><br>
+                    <li>These months fall within Brazil's dry season,
+                         where the climate becomes drier due to reduced rainfall.
+                    </li><br>
+                    <li>The combination of high temperatures, low humidity, and dry vegetation increases the risk 
+                        of forest fires during this period.</li>
+                  </ul>
+            </div>
+            <div class="right2" style="width: 50%;margin: 30px;">
+                <img src="/static/images/aa.png" alt="plot" style="height: 400px; width: 750px;border: 2px solid black;">
+            </div>
+                
+            
+        </div>
+
+
+
+      <footer class="footer" style="text-align: center;">
+        <div class="col-md-6" style="display: inline-block;">
+            <p>2024 Forest Fire Website. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

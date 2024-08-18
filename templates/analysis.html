@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Analysis</title>
+
+    <style>
+      body {
+        font-family: "Poppins", sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+
+      .header {
+        display: flex;
+        justify-content: space-between;
+        background-color: rgba(188, 217, 102, 0.977);
+        height: 75px;
+        margin-top: 0; /* Remove gap above navbar */
+        padding: 0; /* Remove padding */
+      }
+
+      .navbar {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .navbar li {
+        font-size: 25px;
+        list-style-type: none;
+      }
+
+      .navbar li a {
+        color: rgb(13, 1, 1);
+        text-decoration: none;
+      }
+
+      .navbar li a:hover {
+        color: rgb(0, 85, 255);
+      }
+
+      .left img {
+        margin-top: 5px;
+        margin-left: 5px;
+        width: 70px;
+        border: 2px solid rgb(12, 0, 0);
+        border-radius: 50%;
+      }
+
+      .left {
+        margin-right: 10px;
+        display: flex;
+        align-items: center;
+      }
+
+      .mid {
+        width: 650px;
+        padding-left: 0 px;
+        padding-right: 20px;
+      }
+
+      .footer {
+        background-color: rgba(188, 217, 102, 0.977);
+        height: 75px;
+        padding: 10px;
+      }
+
+      .main {
+        display: flex;
+        justify-content: space-between;
+        background-color: #ffffff;
+        padding: 20px;
+        border-radius: 10px;
+        margin: 20px;
+        align-items: center; /* Align items vertically */
+      }
+
+      .main .left1,
+      .main .right,
+      .main .left2,
+      .main .right2 {
+        flex: 1; /* Equal width for all items */
+        padding: 20px; /* Add padding */
+      }
+
+      .main img {
+        max-width: 100%; /* Ensure images don't exceed container width */
+        height: auto; /* Maintain aspect ratio */
+        border: 2px solid black;
+      }
+
+      .r {
+        font-size: 20px;
+      }
+
+      .center {
+        text-align: center;
+      }
+
+      .center h1,
+      .center h2,
+      .center p {
+        margin: 20px; /* Adjust spacing */
+      }
+
+
+
+
+      
+    </style>
+  </head>
+  <body>
+    <header class="header">
+      <div class="left">
+        <img
+          src="/static/images/logo.png"
+          class="text"
+          style="margin-left: 10px; margin-bottom: 5px"
+        />
+        <h5 class="textt" style="margin-top: 15px; margin-left: 20px">
+          Wildfire <br />
+          Alert
+        </h5>
+      </div>
+      <div class="mid">
+        <ul class="navbar">
+          <li><a href="/" class="active">Home</a></li>
+          <li><a href="/fire">Fire Risk</a></li>
+          <li><a href="/weather">Weather</a></li>
+          <li><a href="/analysis">Analysis</a></li>
+        </ul>
+      </div>
+    </header>
+<br><br>
+    <div class="center" style="font-size: 19px; margin-bottom: 20px;">
+      <h1>Increasing Forest Fire Alerts: A Worrying Trend</h1>
+      <p ></p>
+      Recent years have seen a worrying trend in the frequency and severity of forest fires worldwide. From the 
+      Amazon rainforest to the Siberian taiga and the forests of California, wildfires have become more prevalent, 
+      posing significant threats to ecosystems, wildlife, and human communities. Over the last 20 years, 
+      fire-related tree cover loss in the tropics
+        increased at a rate of about 36,000 hectares (around 5%) per year and
+        accounted for roughly 15% of the total global increase in tree cover
+        loss from fires between 2001 and 2024.
+      </p>
+    </div>
+<br>
+    <div class="main" style="background-color: rgba(157, 255, 0, 0.2);">
+      <div class="left1" >
+        <img src="/static/images/plot4.png" alt="plot" />
+      </div>
+      <div class="right">
+        <img src="/static/images/plot3.jpg" alt="plot" />
+      </div>
+    </div>
+<br>
+    <div class="center" style="font-size: 19px; margin-top: 30px;">
+      <h1>About Our Largest Rainforest: The Amazon Rainforest</h1>
+      <p class="text" >
+        The Amazon rainforest stands as the world's largest rainforest, playing
+        a crucial role by providing approximately 30% of the Earth's oxygen,
+        effectively serving as the planet's lungs. As part of our research
+        efforts, we have conducted data analysis focusing on forest fire
+        incidents specifically within the Brazilian region of the Amazon
+        rainforest.
+      </p>
+      <h2 class="texts" style="margin-top: 40px;">About the dataset:</h2>
+      <p class="text" style="padding: 20px;  text-align: center; font-size: 19px; margin-left: 20%; margin-right: 20%;">
+        This dataset report of the number of forest fires in Brazil divided by
+        states. The series comprises the period of approximately 10 years (1998
+        to 2017). The data is obtained from the official website of the
+        Brazilian government.
+      </p>
+    </div>
+
+    <div class="main" style="background-color:rgba(157, 255, 0, 0.2);">
+      <div class="left1" >
+        <img src="/static/images/abc.png" alt="plot" />
+      </div>
+      <div class="right">
+        <ul class="r">
+            <li>
+                This graph shows the yearly trend of forest fires from 1998 to 2017.
+            </li>
+            <li>
+                It can be observed that forest fires were at their peak in the years
+                2003 and 2016.
+            </li>
+            <li>
+                The primary observation from the graph indicates a gradual increase
+                in the frequency of forest fires between 1998 and 2017.
+                Specifically, there has been a rise from 20,000 incidents to 36,000
+                which represent a significant 80% surge.
+            </li>
+        </ul>
+    </div>
+    </div>
+<br>
+    <div class="main" style="background-color: rgba(157, 255, 0, 0.2);">
+      <div class="left2">
+        <ul class="r" >
+          <li >
+            This graph shows the monthly trend of forest fires from 1998 to
+            2017.
+          </li>
+          <li>
+            It can be observed that forest fires were at their peak in the
+            months from July to November.
+          </li>
+          <li>
+            These months fall within Brazil's dry season, where the climate
+            becomes drier due to reduced rainfall.
+          </li>
+          <li>
+            The combination of high temperatures, low humidity, and dry
+            vegetation increases the risk of forest fires during this period.
+          </li>
+        </ul>
+      </div>
+      <div class="right2">
+        <img src="/static/images/aa.png" alt="plot" />
+      </div>
+    </div>
+
+    <div class="center" style="font-size: 19px; margin-top: 30px;">
+        
+        <h2 class="texts" style="margin-top: 40px;">Here are some facts about losses resulting from forest fires:</h2>
+        <p class="text" style="padding: 20px;  text-align: center; font-size: 19px; margin-left: 20%; margin-right: 20%;">
+            2021 was one of the worst years for forest fires since the turn of the century, causing an alarming 9.3 million hectares of tree cover loss globally, over one-third of all tree cover loss that occurred that year.
+        </p>
+        <p class="text" style="padding: 20px;  text-align: center; font-size: 19px; margin-left: 20%; margin-right: 20%;">
+            From 2001 to 2022, India lost 3.59 lakh hectares of tree cover from fires and 2.15 million hectares from all other drivers of loss. And about 5.2 million hectares globally.
+        <p class="text" style="padding: 20px;  text-align: center; font-size: 19px; margin-left: 20%; margin-right: 20%;">
+            The Annual 2022 Wildfires Report from the National Centers for Environmental Information indicates that over 7.5 million acres of wildland were consumed by fire that year.  
+        </p>
+        <p class="text" style="padding: 20px;  text-align: center; font-size: 19px; margin-left: 20%; margin-right: 20%;">
+            Nearly 17 million vertebrate creatures, animals like snakes, small birds and rodents are estimated to have been killed throughout the wildfires in the Pantanal region of Brazil in 2020.
+        </p>
+      </div>
+
+<br>
+    <footer class="footer" style="text-align: center">
+      <div class="col-md-6" style="display: inline-block">
+        <p>2024 Forest Fire Website. All rights reserved.</p>
+      </div>
+    </footer>
+  </body>
+</html>

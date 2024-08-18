@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <title>Starter Template - Materialize</title>
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="./static/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="./static/css2/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <!-- <link rel="stylesheet" href="/static/css/styles.css"> -->
+
+  <style>
+    .head {
+    display: flex;
+    justify-content: space-between;
+    background-color: rgba(188, 217, 102, 0.977);
+    height: 75px;
+    padding: 10px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+}
+
+.navbar li {
+    font-size: 25px;
+    list-style-type: none;
+}
+
+.navbar li a {
+    color: rgb(13, 1, 1);
+    text-decoration: none;
+}
+
+.navbar li a:hover {
+    color: rgb(0, 85, 255);
+}
+
+.left img {
+    margin-top: 5px;
+    margin-left: 5px;
+    width: 70px;
+    border: 2px solid rgb(12, 0, 0);
+    border-radius: 50%;
+}
+
+.left {
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+}
+
+
+.mid {
+    width: 650px;
+    padding-left: 0 px;
+    padding-right: 20px;
+}
+
+.footer{
+    background-color: rgba(188, 217, 102, 0.977);
+    height: 75px;
+    padding: 10px;
+}
+
+/* .ip{
+  font-size: 15px;
+} */
+
+  </style>
+
+</head>
+
+<body>
+  
+  <header class="head">
+    <div class="left">
+      <img src="/static/images/logo.png" class="text" style="margin-left: 10px; margin-bottom: 5px;" />
+      <h5 class="textt" style="margin-top: 15px; margin-left: 20px">
+        Wildfire <br />
+        Alert
+      </h5>
+    </div>
+    <div class="mid">
+      <ul class="navbar">
+        <li><a href="/" class="active">Home</a></li>
+        <li><a href="/fire">Fire Risk</a></li>
+        <li><a href="/weather">Weather</a></li>
+        <li><a href="/analysis">Analysis</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- <div class="section no-pad-bot" id="index-banner"> -->
+    <div class="container">
+      
+      <h1 class="header center orange-text">Forest Fire Prediction</h1>
+      <div class="row center">
+        <h5 class="header col s12 light">Predict the probability of Forest-Fire Occurence
+        <br>
+        </h5>
+      </div>
+
+              <div class="row">
+      <form action='/predict' method="post" class="col s12">
+      <div class="row">
+        <div class="input-field col s4">
+            <label for="first_name" style="font-size: 18px; color: #000;"><b>Temperature</b></label>
+            <br>
+          <input placeholder="Temperature in Celsius" name="Temperature" id="first_name" type="text" class="validate">
+        </div>
+        <div class="input-field col s4">
+
+          <label for="last_name" style="font-size: 18px; color: #000;"><b>Oxygen </b></label>
+            <br>
+          <input id="last_name" name="Oxygen" placeholder="Oxygen content in ppm"  type="text" class="validate">
+
+        </div>
+
+        <div class="input-field col s4">
+            <label for="_name" style="font-size: 18px; color: #000;"><b>Humidity</b></label>
+            <br>
+          <input id="_name" name="Humidity" placeholder="Humidity %" type="text" class="validate">
+
+        </div>
+
+      </div>
+
+      <div class="row center">
+
+          <button type="submit" class="btn-large waves-effect waves-light orange">Predict Probability</button>
+      </div>
+      </form>
+      </div>
+
+      <div class="content text-center" style="background-color: rgb(241, 241, 241); padding: 5px; border-radius: 10px; 
+                  justify-content: center; height: 45px; ">
+      <p style="justify-content: center; font-size: 18px;margin: 5px;margin-left: 270px;"><b>  {{pred}}  </b></p>
+      </div>
+
+        <p>Not sure about parameters? </p>
+        <p><a href="/weather">Click here</a></p>
+
+    </div>
+  <!-- </div> -->
+
+
+    <br><br>
+  </div>
+  </div>>
+
+
+  <footer class="footer" style="text-align: center;">
+    <div class="col-md-6" style="display: inline-block;">
+        <p>2024 Forest Fire Website. All rights reserved.</p>
+    </div>
+</footer>
+
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src=".js/materialize.js"></script>
+  <script src="js/init.js"></script>
+
+  </body>
+</html>
+

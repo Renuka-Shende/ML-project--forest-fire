@@ -1,0 +1,163 @@
+.carousel-item img {
+    height: 400px;
+    width: 850px;
+}
+
+.carousel-inner {
+    margin-left: 30px;
+    height: 400px;
+    width: 850px;
+    border-radius: 15px;
+}
+
+.photo-quote {
+    display: flex;
+    align-items: center;
+}
+
+.quote {
+    margin-left: 20px;
+}
+
+.mid {
+    width: 650px;
+    padding-left: 0 px;
+    padding-right: 20px;
+}
+
+.right {
+    padding-top: 10px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    background-color: rgba(188, 217, 102, 0.977);   
+    /* rgba(188, 217, 102, 0.977) */
+    height: 75px;
+    padding: 10px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+}
+
+.navbar li {
+    font-size: 25px;
+    list-style-type: none;
+}
+
+.navbar li a {
+    color: rgb(13, 1, 1);
+    text-decoration: none;
+}
+
+.navbar li a:hover {
+    color: rgb(0, 85, 255);
+}
+
+.left img {
+    margin-top: 5px;
+    margin-left: 5px;
+    width: 70px;
+    border: 2px solid rgb(12, 0, 0);
+    border-radius: 50%;
+}
+
+.left {
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.right-text {
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    padding: 20px;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+hr {
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    color: black;
+}
+.content{
+    margin: 20px;
+}
+.footer{
+    background-color: rgba(188, 217, 102, 0.977);
+    height: 75px;
+    padding: 10px;
+}
+
+
+/* Layout: */
+.layout {
+    display: flex;
+}
+
+.col {
+    flex: 1;
+    padding: 1em;
+    margin: 0 2px 2px 0;
+    background: #b3e888;
+}
+
+.col-main {
+    order: 1;
+}
+
+.col-complementary {
+    order: 2;
+}
+
+.main-container {
+    display: flex;
+    justify-content: space-between;
+    background-color: #dee9d0 ;
+    height: 450px;
+    padding: 5px; 
+    border-radius: 10px; 
+    margin: 20px;
+}
+.h2 {
+    width: 100%;
+    text-align: center;
+}
+.main-container .left-container {
+    width: 50%;
+    display: flex;
+    margin: 60px
+}
+.main-container .left-container .sub-container {
+    width: 50%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+.main-container .right-container {
+    width: 50%;
+    text-align: center;
+}
+.main-container .right-container img {
+    max-width: 550px;
+    height: 450px;
+    padding: 2%;
+}
+.r{
+    margin-left: 50px;
+    font-size: 20px;
+}
+
+
+
+
+/* Responsive: */
+@media only screen and (max-width: 640px) {
+    .layout {
+        flex-direction: column;
+    }
+}

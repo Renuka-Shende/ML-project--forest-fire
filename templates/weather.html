@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/styles.css">
+    <title>Weather</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            /* background-image: url('/static/images/bg5.jpg');
+            background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed; */
+        }
+        .container {
+            margin-top: 50px;
+        }
+        .weather-form {
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        .weather-card {
+            background-color: rgba(184, 230, 112, 0.1);
+            border-radius: 10px;
+            margin-bottom: 20px;
+            height: 300px;
+            width: 270px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .card-img-top {
+            height: 100px;
+            width: 110px;
+            object-fit: cover;
+            border-radius: 0%;
+            margin: 20px auto;
+        }
+        .card-body {
+            text-align: center;
+        }
+        .card-title {
+            color: rgba(164, 211, 24, 0.977);
+        }
+        .card-text {
+            color: #333;
+        }
+        button[type="submit"] {
+            background-color: rgba(164, 211, 24, 0.977);
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        button[type="submit"]:hover {
+            background-color: #0d7aef;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="left">
+          <img src="/static/images/logo.png" class="text" style="margin-left: 10px; margin-bottom: 5px;" />
+          <h5 class="textt" style="margin-top: 15px; margin-left: 20px">
+            Wildfire <br />
+            Alert
+          </h5>
+        </div>
+        <div class="mid">
+          <ul class="navbar">
+            <li><a href="/" class="active">Home</a></li>
+            <li><a href="/fire">Fire Risk</a></li>
+            <li><a href="/weather">Weather</a></li>
+            <li><a href="/analysis">Analysis</a></li>
+          </ul>
+        </div>
+      </header>
+    <div class="container">
+        <div class="row justify-content-center" >
+            <div class="col-md-6" >
+                <form action="/city" method="post" class="weather-form" style="background-color: rgba(184, 230, 112, 0.1); ">
+                    <div class="form-group" > <!--style="background-color: rgba(0, 0, 0, 0.1); " -->
+                        <label for="input_type">Select Input Type:</label><br>
+                        <input type="radio" id="area" name="input_type" value="area" checked>
+                        <label for="area">City</label>
+                        <input type="radio" id="coordinates" name="input_type" value="coordinates">
+                        <label for="coordinates">Coordinates</label>
+                    </div>
+                    <div id="area_input" class="form-group">
+                        <label for="city_name">Enter city:</label>
+                        <input type="text" id="city_name" name="city_name" class="form-control">
+                    </div>
+                    <div id="coordinates_input" class="form-group" style="display: none;">
+                        <label for="latitude">Enter latitude:</label>
+                        <input type="text" id="latitude" name="latitude" class="form-control">
+                        <label for="longitude">Enter longitude:</label>
+                        <input type="text" id="longitude" name="longitude" class="form-control">
+                    </div>
+                    <button type="submit">Check Weather Conditions</button>
+                </form>
+                <br>
+                <br>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-md-4">
+                <div class="weather-card">
+                    <img src="/static/images/temperature-svgrepo-com.svg" class="card-img-top" alt="Temperature">
+                    <div class="card-body">
+                        <h5 class="card-title">Temperature</h5>
+                        <p class="card-text">{{ temp }} C</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="weather-card">
+                    <img src="/static/images/humidity-svgrepo-com.svg" class="card-img-top" alt="Humidity">
+                    <div class="card-body">
+                        <h5 class="card-title">Humidity</h5>
+                        <p class="card-text">{{ humidity }} g/m3</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="weather-card">
+                    <img src="/static/images/wind-energy-svgrepo-com.svg" class="card-img-top" alt="Wind Speed">
+                    <div class="card-body">
+                        <h5 class="card-title">Wind Speed</h5>
+                        <p class="card-text">{{ wind_speed }} m/s</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-md-4">
+                <div class="weather-card">
+                    <img src="/static/images/cloudy-svgrepo-com.svg" class="card-img-top" alt="Cloudiness">
+                    <div class="card-body">
+                        <h5 class="card-title">Cloudiness</h5>
+                        <p class="card-text">{{ cloudiness }} %</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="weather-card">
+                    <img src="/static/images/weather-svgrepo-com.svg" class="card-img-top" alt="Weather Description">
+                    <div class="card-body">
+                        <h5 class="card-title">Weather Description</h5>
+                        <p class="card-text">{{ weather_description }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="footer" style="text-align: center;">
+        <div class="col-md-6" style="display: inline-block;">
+            <p>2024 Forest Fire Website. All rights reserved.</p>
+        </div>
+    </footer>
+    
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const areaInput = document.getElementById('area_input');
+            const coordinatesInput = document.getElementById('coordinates_input');
+            const areaRadio = document.getElementById('area');
+            const coordinatesRadio = document.getElementById('coordinates');
+
+            areaRadio.addEventListener('change', function () {
+                if (areaRadio.checked) {
+                    areaInput.style.display = 'block';
+                    coordinatesInput.style.display = 'none';
+                }
+            });
+
+            coordinatesRadio.addEventListener('change', function () {
+                if (coordinatesRadio.checked) {
+                    areaInput.style.display = 'none';
+                    coordinatesInput.style.display = 'block';
+                }
+            });
+        });
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
